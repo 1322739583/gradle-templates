@@ -19,10 +19,15 @@
         suggest="${layoutToActivity(layoutName)}"
         default="MainActivity"
         help="" />
+    
+    <parameter
+        id="createLauncher"
+        name="create launcher"
+        type="boolean"
+        default="true"
+        help="" />
 
- 
 
- 
 
     <parameter
         id="layoutName"
