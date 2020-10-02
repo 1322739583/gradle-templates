@@ -5,6 +5,14 @@
 <#macro generateManifest packageName hasApplicationBlock=false>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="${packageName}"<#if !hasApplicationBlock>/</#if>><#if hasApplicationBlock>
+        
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>   
 
     <application
         android:allowBackup="true"
@@ -52,6 +60,11 @@ android {
         targetCompatibility JavaVersion.VERSION_${javaVersion?replace('.','_','i')}
     }
 </#if>
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
 <#if canUseProguard>
 <@proguard.proguardConfig />
