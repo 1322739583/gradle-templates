@@ -1,4 +1,4 @@
-package ${packageName}.${adapterPakage};
+package ${packageName}.${adapterPackage};
 
 import android.view.View;
 import android.widget.TextView;

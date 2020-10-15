@@ -8,6 +8,9 @@
 	<instantiate from="root/src/app_package/adapter/TempAdapter.java.ftl"
 		to="${escapeXmlAttribute(srcOut)}/${adapterPackage}/${adapterName}.java" />
 
+	<instantiate from="root/src/app_package/model/DataModel.java.ftl"
+		to="${escapeXmlAttribute(srcOut)}/${modelPackage}/${modelName}.java" />
+
 	<instantiate from="root/res/layout/temp_layout.xml.ftl"
 		to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
 

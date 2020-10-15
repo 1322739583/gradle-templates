@@ -2,7 +2,7 @@
 <template
     format="5"
     revision="5"
-    name="RecyclerViewWithBRVH"
+    name="RecyclerViewWithOneTextOneImageHor"
     minApi="7"
     minBuildApi="14"
     description="">
@@ -37,11 +37,18 @@
         default="adapter"
         help="" />
 
-    <parameter
+     <parameter
         id="modelName"
         name="Model Name"
         type="string"
-        default="Model"
+        default="DataModel"
+        help="" />
+
+        <parameter
+        id="modelPackage"
+        name="Model Package"
+        type="string"
+        default="model"
         help="" />
 
     <parameter
