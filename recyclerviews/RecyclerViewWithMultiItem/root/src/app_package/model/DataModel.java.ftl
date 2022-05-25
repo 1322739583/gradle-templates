@@ -1,10 +1,10 @@
+package ${packageName}.${modelPackage};
 
-
-public class DataModel {
+public class ${modelName} {
     private String content;
     private String imgUrl;
 
-    public DataModel( String imgUrl,String content) {
+    public ${modelName} ( String imgUrl,String content) {
         this.content = content;
         this.imgUrl = imgUrl;
     }

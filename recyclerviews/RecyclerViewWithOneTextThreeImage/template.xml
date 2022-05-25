@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<template
+    format="5"
+    revision="5"
+    name="RecyclerViewWithOneTextThreeImageHor"
+    minApi="7"
+    minBuildApi="14"
+    description="">
+
+    <category value="RecyclerView" />
+    <formfactor value="Mobile" />
+
+    <!-- input data -->
+    
+
+    <parameter
+        id="activityName"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MainActivity"
+        help="" />
+
+    <parameter
+        id="adapterName"
+        name="Adapter Name"
+        type="string"
+   
+        default="Adapter"
+        help="" />
+    
+      <parameter
+        id="adapterPackage"
+        name="Adapter Package"
+        type="string"
+        default="adapter"
+        help="" />
+
+     <parameter
+        id="modelName"
+        name="Model Name"
+        type="string"
+        default="DataModel"
+        help="" />
+
+        <parameter
+        id="modelPackage"
+        name="Model Package"
+        type="string"
+        default="model"
+        help="" />
+
+    <parameter
+        id="itemXmlName"
+        name="Item Xml"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(activityName)}_item"
+        default="activity_main_item"
+        help="" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(activityName)}"
+        default="activity_main"
+        help="" />
+
+    <!-- 128x128 thumbnails relative to com.puke.template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_cover.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
